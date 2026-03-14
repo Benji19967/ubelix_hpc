@@ -50,3 +50,35 @@ Host github.com
         IdentityFile ~/.ssh/id_ed25519_ubelix_internal
 ```
 
+## Runing a java program
+
+Check which java modules are available:
+
+```
+module avail Java
+```
+
+Load a java module:
+
+```
+ module load Java
+```
+
+Check the versions:
+
+```
+java --version
+javac --version
+```
+
+Login to a compute machine using SLURM:
+
+```
+srun --cpus-per-task=8 --time=10:00 --pty bash
+```
+
+Run a program:
+
+```
+java <path to program>
+```
