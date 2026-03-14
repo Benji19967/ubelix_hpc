@@ -34,3 +34,19 @@ then you can login with
 ```
 ssh ubelix
 ```
+
+## Interacting with GitHub
+
+First we add the content of the file `~/.ssh/id_ed25519_ubelix_internal.pub` (the public key), living on the HPC machine, to 
+GitHub ssh keys as an authorized key.
+
+By default, when performing any interactions through ssh, like cloning a repo using the ssh option, ssh might try authenticating with the 
+wrong key and authentication fails. So we specify which (private) key to use for authentication. To `~/.ssh/config` on the HPC machine, add:
+
+```
+Host github.com
+        HostName github.com
+        User git
+        IdentityFile ~/.ssh/id_ed25519_ubelix_internal
+```
+
