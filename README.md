@@ -50,6 +50,13 @@ Host github.com
         IdentityFile ~/.ssh/id_ed25519_ubelix_internal
 ```
 
+Setting up git user configs:
+
+```
+git config --global user.name "<full name>"
+git config --global user.email "<email linked to github account>"
+```
+
 ## Runing a java program
 
 Check which java modules are available:
