@@ -57,6 +57,12 @@ git config --global user.name "<full name>"
 git config --global user.email "<email linked to github account>"
 ```
 
+## Requesting a GPU node
+
+```
+srun --partition=gpu --gres=gpu:rtx4090:1 --cpus-per-task=4 --nodes=1 --mem=16G --time=02:00:00 --pty bash
+```
+
 ## Runing a java program
 
 Check which java modules are available:
@@ -88,4 +94,29 @@ Run a program:
 
 ```
 java <path to program>
+```
+
+## Setting up Python
+
+### Set up `uv`
+
+```
+curl -Ls https://astral.sh/uv/install.sh | sh
+```
+
+This installs `uv` in `~/.local/bin/`.
+
+Create some scratch space: (see https://hpc-unibe-ch.github.io/storage/scratch/) for `.venv`s. In `$SCRATCH` you have 15TB available per user, but it is not backed up.
+Perfect for virtual environments.
+
+```
+module load Workspace_Home
+mkdir $SCRATCH
+chmod 700 $SCRATCH
+```
+
+Add this to `~/.bashrc`:
+
+```
+export UV_CACHE_DIR=$SCRATCH/uv-cache
 ```
