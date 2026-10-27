@@ -4,7 +4,7 @@
 
 Make sure you are on the university network of the University of Bern. You can setup VPN access as documented here:
 
-[https://www.unibe.ch/university/campus_and_infrastructure/rund_um_computer/internetzugang/access_to_internal_resources_via_vpn/index_eng.html](VPN setup)
+[VPN setup](https://www.unibe.ch/university/campus_and_infrastructure/rund_um_computer/internetzugang/access_to_internal_resources_via_vpn/index_eng.html)
 
 ## Setting up passwordless ssh login
 
