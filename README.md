@@ -1,5 +1,9 @@
 # Ubelix
 
+## Docs
+
+https://hpc-unibe-ch.github.io/
+
 ## Access the university network
 
 Make sure you are on the university network of the University of Bern. You can setup VPN access as documented here:
